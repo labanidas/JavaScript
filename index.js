@@ -1,12 +1,17 @@
-document.querySelectorAll("button")[0].onclick = () => {
-  let b = document.getElementById("base").value;
-  b = Number(b);
-  let h = document.getElementById("height").value;
-  h = Number(h);
-
-  let hypotenuse = Math.sqrt(Math.pow(b, 2) + Math.pow(h, 2));
-
-  document.getElementById(
-    "hypotenuse"
-  ).innerHTML = `Hypotenuse is ${hypotenuse}`;
-};
+let increase=document.getElementById("increase");
+let reset=document.getElementById("reset");
+let decrease=document.getElementById("decrease");
+let value = document.getElementsByTagName("h1")[0];
+let num = 0;
+increase.onclick = ()=>{
+       num+=1;
+       value.textContent=`${num}`;
+}
+reset.onclick = ()=>{
+    num=0;
+    value.textContent=`${num}`;
+}
+decrease.onclick = ()=>{
+    num-=1;
+    value.textContent=`${num}`;
+}
